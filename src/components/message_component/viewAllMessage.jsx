@@ -126,6 +126,7 @@ class ViewMessages extends Component {
           }}
           name="value"
           onSave={this.handelSave}
+          header="Edit Message"
         />
       </React.Fragment>
     );

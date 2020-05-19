@@ -38,41 +38,41 @@ class Register extends Component {
         }}
       >
         <form className="w-50 p-3 bg-white">
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="userName">UserName</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="userName"
               name="userName"
               onChange={(e) => this.handelChange(e)}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="password"
               name="password"
               onChange={(e) => this.handelChange(e)}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="confirmPassword"
               name="confirmPassword"
               onChange={(e) => this.handelChange(e)}
             />
           </div>
-          <Link to="/login" onClick={this.handelRegister} class="submit">
+          <Link to="/login" onClick={this.handelRegister} className="submit">
             Submit
           </Link>
           <Link to="/login" className="float-right submit">
-            You are alredy a member?
+            You are already a member?
           </Link>
         </form>
       </div>

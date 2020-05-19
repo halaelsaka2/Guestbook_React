@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { getGuestByUserId, AddnewGuestbook } from "../../Api/guestBook";
-// import { FindUserById } from "../../Api/user";
 import ModalComponent from "../Modal_component/modal";
 import { addReply, getMessageById } from "../../Api/message";
 class GuestCard extends Component {
@@ -135,6 +134,7 @@ class GuestCard extends Component {
           }}
           name="reply"
           onSave={this.handelSave}
+          header="Add Reply"
         />
       </React.Fragment>
     );

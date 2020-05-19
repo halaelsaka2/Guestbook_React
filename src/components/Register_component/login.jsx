@@ -38,22 +38,22 @@ class Login extends Component {
         }}
       >
         <form className="w-50 p-3 bg-white">
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="userName">UserName</label>
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               id="userName"
               name="userName"
               value={this.state.userAccount.userName}
               onChange={(e) => this.handelChange(e)}
             />
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="password"
               name="password"
               value={this.state.userAccount.password}

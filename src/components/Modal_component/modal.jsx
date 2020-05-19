@@ -11,10 +11,11 @@ class ModalComponent extends Component {
       onToggleModal,
       name,
       onSave,
+      header,
     } = this.props;
     return (
       <Modal isOpen={isOppen}>
-        <ModalHeader toggle={onToggleModal}>Modal header</ModalHeader>
+        <ModalHeader toggle={onToggleModal}>{header}</ModalHeader>
         <ModalBody>
           <input
             type="text"
@@ -28,7 +29,7 @@ class ModalComponent extends Component {
             save
           </button>
           <button className="btn btn-secondary" onClick={onToggleModal}>
-            cancle
+            cancel
           </button>
         </ModalFooter>
       </Modal>
