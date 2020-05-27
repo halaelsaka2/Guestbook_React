@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:3000/guestbook";
+const url = "https://guestbook-messages-2020.herokuapp.com/guestbook";
 
 
 

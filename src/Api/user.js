@@ -1,5 +1,5 @@
 import axios from'axios';
-const userEndPoint = "http://localhost:3000/user";
+const userEndPoint = "https://guestbook-messages-2020.herokuapp.com/user";
 
 export async function RegisterUser(newUser) {
     const registerEndPoint = `${userEndPoint}/register`;
