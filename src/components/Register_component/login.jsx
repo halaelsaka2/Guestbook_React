@@ -60,12 +60,14 @@ class Login extends Component {
               onChange={(e) => this.handelChange(e)}
             />
           </div>
-          <Link onClick={this.handelLogin} to="/home" className="submit">
-            Login
-          </Link>
-          <Link to="/register" className="float-right submit">
-            Register Now
-          </Link>
+          <div className="buttons-container">
+            <Link onClick={this.handelLogin} to="/home" className="submit">
+              Login
+            </Link>
+            <Link to="/register" className="float-right submit">
+              Register Now
+            </Link>
+          </div>
         </form>
       </div>
     );

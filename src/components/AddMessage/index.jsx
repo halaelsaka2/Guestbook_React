@@ -26,32 +26,30 @@ class AddMessage extends Component {
     this.setState({ message });
   };
 
+  handleClick = () => {
+    this.props.history.push("/home");
+  };
   render() {
     return (
       <React.Fragment>
-        <Link className="button" to={`/home`}>
-          Back To Home
-        </Link>
         <div className="container1">
           <h3>
             <span className="title">Guestbook</span>
           </h3>
-          <div className="box">
-            <div className="text">
-              <div className="before">
+          {/* <div className="box"> */}
+            {/* <div className="text"> */}
+              {/* <div className="before">
                 <div className="line"></div>
-              </div>
+              </div> */}
               <h5 className="content">Say Hi</h5>
-              <div className="after">
+              {/* <div className="after">
                 <div className="line"></div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <div className="box-content">
               <form className="form">
                 <div className="form-message form-input">
                   <textarea
-                    className=""
-                    required="required"
                     placeholder="Write us something nice ..."
                     name="value"
                     onChange={(e) => this.handelChange(e)}
@@ -65,7 +63,7 @@ class AddMessage extends Component {
                 </div>
               </form>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </React.Fragment>
     );

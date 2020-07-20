@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import GuestCard from "../card_component/guestCard";
-import ViewCard from "../card_component/listViewCards";
+import GuestCard from "../../components/GuestCard";
+import ViewCard from "../../components/ListViewCard";
+
 class Home extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div className="project-container">
         <GuestCard />
         <ViewCard />
-      </React.Fragment>
+      </div>
     );
   }
 }

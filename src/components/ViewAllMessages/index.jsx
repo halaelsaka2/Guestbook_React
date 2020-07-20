@@ -6,7 +6,7 @@ import {
   getMessageById,
   editMessage,
 } from "../../Api/message";
-import ModalComponent from "../../components/Modal_component/modal";
+import ModalComponent from "../../components/Modal_component";
 class ViewMessages extends Component {
   state = {
     guestbook: {
@@ -67,53 +67,48 @@ class ViewMessages extends Component {
     const user = JSON.parse(localStorage.getItem("user"));
     return (
       <React.Fragment>
-        <Link className="button" to={`/home`}>
-          Back To Home
-        </Link>
-        <div className="left-container container4">
-          <div className="container2 ">
-            <div className="box">
-              <div className="text">
-                <div className="before">
-                  <div className="line"></div>
-                </div>
-                <h5 className="content">Hi {user.userName}</h5>
-                <div className="after">
-                  <div className="line"></div>
-                </div>
+        <div className=" container4">
+          <div className="box">
+            <div className="text">
+              <div className="before">
+                <div className="line"></div>
               </div>
-              <div className="box-content">
-                <h5 className="content">
-                  Messages which you write to your Frindes
-                </h5>
-                {messages.map((msg) => (
-                  <div className="message-box">
-                    <div className="message-content">
-                      <div className="message-body">
-                        <p>{msg.value}</p>
-                      </div>
-                      <Link
-                        className="btn-sm btn-danger "
-                        onClick={() => {
-                          this.handelDelete(msg.id);
-                        }}
-                      >
-                        <i className="fas fa-trash-alt"></i>
-                      </Link>
-                      <button
-                        className="btn-sm btn-primary "
-                        data-toggle="modal"
-                        data-target="#exampleModal"
-                        onClick={() => {
-                          this.toggle(msg.id);
-                        }}
-                      >
-                        <i className="far fa-edit"></i>
-                      </button>
+              <h5 className="content">Hi {user.userName}</h5>
+              <div className="after">
+                <div className="line"></div>
+              </div>
+            </div>
+            <div className="box-content">
+              <h5 className="content">
+                Messages which you write to your Frindes
+              </h5>
+              {messages.map((msg) => (
+                <div className="message-box" key={msg.id}>
+                  <div className="message-content">
+                    <div className="message-body">
+                      <p>{msg.value}</p>
                     </div>
+                    <Link
+                      className="btn-sm btn-danger "
+                      onClick={() => {
+                        this.handelDelete(msg.id);
+                      }}
+                    >
+                      <i className="fas fa-trash-alt"></i>
+                    </Link>
+                    <button
+                      className="btn-sm btn-primary "
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                      onClick={() => {
+                        this.toggle(msg.id);
+                      }}
+                    >
+                      <i className="far fa-edit"></i>
+                    </button>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

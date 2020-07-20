@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { getGuestByUserId, AddnewGuestbook } from "../../Api/guestBook";
-import ModalComponent from "../Modal_component/modal";
+import ModalComponent from "../Modal_component";
 import { addReply, getMessageById } from "../../Api/message";
 class GuestCard extends Component {
   state = {
@@ -73,9 +72,6 @@ class GuestCard extends Component {
     return (
       <React.Fragment>
         <div className="left-container">
-          <Link className="submit" to={`/messages`}>
-            Sent Messages
-          </Link>
           <div className="container2">
             <h3>
               <span className="title">Guestbook</span>
@@ -94,7 +90,7 @@ class GuestCard extends Component {
                 <h5 className="content">Your Messages From Your frinds</h5>
                 {guestbook.messages.length > 0 ? (
                   guestbook.messages.map((msg) => (
-                    <div className="message-box">
+                    <div className="message-box" key={msg.id}>
                       <div className="message-content">
                         <div className="message-header"></div>
                         <div className="message-body">
